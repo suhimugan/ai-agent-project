@@ -1,0 +1,14 @@
+Product Setup
+Download the installer from our website and run it as administrator.
+The setup wizard will guide you through the installation in under 5 minutes.
+Supported platforms: Windows 10/11, macOS 12+, Ubuntu 20.04+.
+
+Troubleshooting
+If the app fails to launch, restart your computer and try again.
+For persistent issues, delete the cache folder at AppData/Local/OurApp/cache.
+Contact support with your error log if the problem continues.
+
+Pricing Plans
+Starter plan: free forever, up to 3 projects.
+Pro plan: $12/month, unlimited projects and priority support.
+Enterprise plan: custom pricing, dedicated account manager.
