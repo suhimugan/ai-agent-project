@@ -364,7 +364,7 @@ MIT — use it, extend it, build on it.
 
 ## Author
 
-Built by [@YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)
+Built by [@suhimugan(https://github.com/suhimugan)
 as a real-world AI engineering learning project.
 
 If this helped you, star the repo ⭐ and share it.
