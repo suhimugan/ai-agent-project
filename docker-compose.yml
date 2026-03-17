@@ -1,0 +1,12 @@
+services:
+  ai-copilot:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true

@@ -1,0 +1,31 @@
+2026-03-17 09:24:41,903 | INFO | AI Knowledge Copilot started
+2026-03-17 09:32:59,293 | INFO | AI Knowledge Copilot started
+2026-03-17 09:33:10,175 | INFO | Question received: Who is on the Pro plan?
+2026-03-17 09:33:11,576 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:11,611 | INFO | Tool selected: sql_query
+2026-03-17 09:33:11,612 | INFO | SQL question: 'Who is on the Pro plan?'
+2026-03-17 09:33:11,642 | INFO | Tool result status: success
+2026-03-17 09:33:12,935 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:12,945 | INFO | Answer generated | tool: sql_query | confidence: high | sources: ['company.db']
+2026-03-17 09:33:39,119 | INFO | Question received: What is our refund policy?What is our total revenue?
+2026-03-17 09:33:40,425 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:40,427 | INFO | Tool selected: document_search
+2026-03-17 09:33:40,427 | INFO | Document search query: 'refund policy'
+2026-03-17 09:33:40,446 | INFO | Tool result status: success
+2026-03-17 09:33:40,714 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-03-17 09:33:40,715 | ERROR | API error: 400 — Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'messages.2: `tool_use` ids were found without `tool_result` blocks immediately after: toolu_015S4YXWCcJcL6GMRWBSVdNA. Each `tool_use` block must have a corresponding `tool_result` block in the next message.'}, 'request_id': 'req_011CZ8RU9Wqmw7WKAPk2q2ZB'}
+2026-03-17 09:33:46,515 | INFO | Question received: What is our refund policy?
+2026-03-17 09:33:47,533 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:47,535 | INFO | Tool selected: document_search
+2026-03-17 09:33:47,535 | INFO | Document search query: 'refund policy'
+2026-03-17 09:33:47,552 | INFO | Tool result status: success
+2026-03-17 09:33:49,303 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:49,304 | INFO | Answer generated | tool: document_search | confidence: high | sources: ['company_policy.txt', 'hr_policy.txt']
+2026-03-17 09:33:53,849 | INFO | Question received: What is our total revenue?quit
+2026-03-17 09:33:58,187 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:58,189 | INFO | Tool selected: sql_query
+2026-03-17 09:33:58,190 | INFO | SQL question: 'What is the total revenue?'
+2026-03-17 09:33:58,213 | INFO | Tool result status: success
+2026-03-17 09:33:59,116 | INFO | HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-17 09:33:59,118 | INFO | Answer generated | tool: sql_query | confidence: high | sources: ['company.db']
+2026-03-17 09:34:04,263 | INFO | AI Knowledge Copilot stopped
