@@ -100,18 +100,22 @@ def _run_agent_loop(question: str) -> AgentResponse:
         max_tokens=MAX_TOKENS,
         tools=tools,
         messages=messages,
-        system="""You are a helpful knowledge assistant with access to two tools:
+        system="""You are a helpful knowledge assistant with access to local documents and a database.
 
-1. document_search — ONLY for questions about policies, procedures, guides, and rules.
-2. sql_query — ONLY for questions about real data: customers, orders, revenue, support tickets.
+TOOLS:
+1. document_search — searches local files. Use for ANY question about a document,
+   form, file, or anything the user might have stored locally. If the user mentions
+   a filename, form name, or asks about personal documents — always search.
+2. sql_query — use for questions about customers, orders, revenue, support tickets.
 
 STRICT RULES:
-- Questions about PEOPLE, NUMBERS, RECORDS → always use sql_query
-- Questions about POLICIES, RULES, GUIDES → always use document_search
-- NEVER use document_search for customer or order data
-- NEVER guess — always call a tool first
-- Base your answer only on tool results, never on prior knowledge"""
-    )
+- ALWAYS call a tool before answering. Never answer from your own knowledge.
+- If the user mentions any document, form, or file name → use document_search immediately.
+- If you are unsure which tool to use → default to document_search.
+- Extract simple keywords from the question for your search query.
+  Example: 'what is my claim number in n293a' → search query: 'claim number'
+- Never ask for clarification before searching. Search first, clarify after if needed.
+- Base your answer only on tool results. If nothing is found, say so clearly.""")
 
     tool_used = "none"
     sources = []
