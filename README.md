@@ -132,7 +132,7 @@ ai-agent-project/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-agent-project.git
+git clone https://github.com/suhimugan/ai-agent-project.git
 cd ai-agent-project
 ```
 
